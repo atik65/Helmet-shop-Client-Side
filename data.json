@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Bell Helmets",
+    "price": 300,
+    "image": "https://i.ibb.co/HPvXgyR/bell-helmet.jpg",
+    "rating ": 5,
+    "certification ": "DOT, SNELL",
+    "description ": "Established in 1954, this US-based brand is popular for its lightweight headgears with detailed designs. Scoring an average of 4.4 across safety ratings, Bell helmets offer maximum protection even in off-road conditions, which makes these helmets a favourite with professional motocross racers. ",
+    "type": "Full-face, snowmobile, half-face, 3/4 helmets"
+  },
+  {
+    "name": "Shoei Helmets",
+    "price": 400,
+    "image": "https://i.ibb.co/4syqbDb/shoei-helmets.jpg",
+    "rating ": 5,
+    "certification ": "SNELL M2015, DOT",
+    "description ": "This Japan-based company is one of the oldest helmet manufacturers who introduced carbon fiber headgears. They are known for the best quality helmet sporting classy designs and offering optimum safety with a 4.5 rating in crash tests. Notable features of Shoei helmets are removable interior lining, pin lock anti-fog system, and adequate ventilation.",
+    "type": "Full-face, open-face helmets"
+  },
+  {
+    "name": "HJC Helmets",
+    "price": 350,
+    "image": "https://i.ibb.co/G9K1yyb/hjc-helmets.jpg",
+    "rating ": 4.5,
+    "certification ": "SNELL, DOT, ECE",
+    "description ": "HJC is a brand known for producing some of the safest and comfortable headgears. This is understandable from the fact that older models from the brand like the FG-ST sport a 5-star safety rating, and 6 of their recently-tested helmets have scored a 4/5 SHARP rating.",
+    "type": "Full-face, open-face helmets"
+  },
+  {
+    "name": "LS2 Helmets",
+    "price": 390,
+    "image": "https://i.ibb.co/7kQYRMs/ls2-helmets.jpg",
+    "rating ": 5,
+    "certification ": "DOT, ECE",
+    "description ": "One of the most famous helmet brands in India, LS2 manufactures premium offerings that combine comfort with safety. LS2 helmets have their outer shells manufactured from lightweight but solid Kinetic Polymer Alloy (KPA) and come with removable and washable specialised inner liners. These headgears feature double visors with anti-fog technology and offering a panoramic view.",
+    "type": "Full-face, open-face, flip-up helmets"
+  },
+  {
+    "name": "AGV Helmets",
+    "price": 150,
+    "image": "https://i.ibb.co/k0xw2DM/avg-helmets.jpg",
+    "rating ": 5,
+    "certification ": "DOT, ECE",
+    "description ": "If you are looking for a good quality helmet within a more affordable price range, then AGV can be your go-to brand. They come with EPS-incorporated inner lining and a sturdy exterior, courtesy of a carbon fiber glass shell. It reaches our list of top 10 helmet brands due to notable features like 7 vents, built-in sun visor, pressure-free fit, and face-shield protection.",
+    "type": "Full-face, open-face helmets"
+  },
+  {
+    "name": "Arai Helmets",
+    "price": 100,
+    "image": "https://i.ibb.co/pLBzh6N/arai-helmets.jpg",
+    "rating ": 4,
+    "certification ": "DOT, SNELL",
+    "description ": "Arai is another Japanese helmet manufacturing brand, which is also one of the oldest. These headgears are especially notable because they are handcrafted by professionals and undergo multi-level tests after exterior manufacture, paint application, and final assembly. Arai produces some of the safest helmets with 4.4/5 to 4.5/5 safety ratings. They also come with features like breathe deflector and launch helmet removal system.",
+    "type": "Full-face, open-face helmets"
+  },
+  {
+    "name": "Shark Helmets",
+    "price": 110,
+    "image": "https://i.ibb.co/8zDQRL6/shark-helmets.jpg",
+    "rating ": 5,
+    "certification ": "ECE, DOT, AS/NZS, INMETRO",
+    "description ": "Another of the best helmet brands globally is the French manufacturer Shark. Helmets from this brand offer high-grade safety for motorcyclists. They also sport innovative designs and technologies like a quick-release visor for convenient usability. Each of their products comes with a 5-year warranty, which is commendable within this price range. The aerodynamics of the company’s headgears is also wisely planned.",
+    "type": "Full-face, open-face, modular, 3/4 helmets"
+  },
+  {
+    "name": "MT Helmets",
+    "price": 120,
+    "image": "https://i.ibb.co/6HGGW2Q/mt-helmets.jpg",
+    "rating ": 4.5,
+    "certification ": "ECE, DOT, SNELL",
+    "description ": "Widely popular in the UK, this Spanish manufacturer is one of the top helmet brands to offer some of the safest headgears with 3/5 to 5/5 ratings at a low cost. These helmets sport a strengthened jawline and a large frontal zone, rendering it a unique sharp look. They are manufactured with durable materials like carbon composites and thermoplastic, offering optimum protection while ensuring adequate comfort.",
+    "type": "Full-face, flip-up, half helmets"
+  },
+  {
+    "name": "Studds Helmets",
+    "price": 95,
+    "image": "https://i.ibb.co/48VqvCH/studds-helmets.jpg",
+    "rating ": 4,
+    "certification ": "ECE, ISI, SLSI",
+    "description ": "Here is an Indian brand making it to this list of best helmet brands worldwide. Studds helmets are sold in 38 countries, and they are popular due to their high-impact grade thermoplastic exterior. These headgears come with scratch-resistant polycarbonate visors with hard silicone coating, available in clear, mirror, rainbow, and smoke variants. The inner lining of these helmets is made of plush. ",
+    "type": " Full-face, open-face, flip-up, industrial helmets"
+  },
+  {
+    "name": "THH Helmets",
+    "price": 140,
+    "image": "https://i.ibb.co/DgVWmFr/thh-helmets.jpg",
+    "rating ": 5,
+    "certification ": "ECE, ISI, SLSI",
+    "description ": "Tong-ho-Hsing, or THH, is a renowned Taiwan-based brand known for its lightweight and yet highly durable headgear. One of the good helmet brands known for their quality, THH uses advanced technologies like carbon fiber Kevlar. Available in a variety of colours and graphics, these headgears are designed using Finite Element Analysis and 3D modelling. These helmets also ensure optimum comfort with adequate ventilation.",
+    "type": " Full-face, open-face, flip-up, industrial helmets"
+  }
+]

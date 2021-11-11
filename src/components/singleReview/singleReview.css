@@ -1,0 +1,8 @@
+.single-review {
+  text-align: center;
+  background-color: #fff;
+  margin: 0 5px;
+  border-radius: 8px;
+  padding: 0 15px;
+  min-height: 240px;
+}

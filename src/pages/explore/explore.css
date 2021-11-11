@@ -1,0 +1,13 @@
+.explore h1 {
+  position: relative;
+}
+/* 
+.explore h1::after {
+  content: "";
+  background-color: #e52727;
+  height: 3px;
+  width: 10%;
+  position: absolute;
+  bottom: -10px;
+  left: 45%;
+} */

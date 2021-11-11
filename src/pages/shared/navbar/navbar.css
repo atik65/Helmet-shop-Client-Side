@@ -1,0 +1,31 @@
+.navbar-logo {
+  font-size: 40px;
+  font-weight: 700 !important;
+}
+.nav-lists {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo span {
+  color: #e52727;
+}
+.nav-logo {
+  background-color: #e52727;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+  .navbar-logo {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navbar-logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+}
