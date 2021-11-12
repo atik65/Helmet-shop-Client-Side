@@ -1,3 +1,11 @@
+.buynow {
+  background-color: #fff;
+}
+
+.buy-now-inner {
+  min-height: 40vh;
+}
+
 .buynow img {
   width: 100%;
   padding: 15px;

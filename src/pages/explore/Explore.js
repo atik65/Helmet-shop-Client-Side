@@ -36,7 +36,7 @@ const Explore = () => {
           </div>
         </div>
       ) : (
-        <div className="display-products-container container pb-5">
+        <div className="display-products-container  container pb-5">
           {helmets.map((helmet) => {
             return <SingleHelmet key={helmet._id} helmet={helmet} />;
           })}

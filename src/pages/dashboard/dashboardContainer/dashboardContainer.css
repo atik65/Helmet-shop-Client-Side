@@ -1,0 +1,28 @@
+.dashboard-logo {
+  padding: 0 30px;
+  padding-right: 0;
+}
+
+.dashboard-logo h2 {
+  font-size: 26px;
+  padding: 0;
+}
+
+.dashboard-logo img {
+  width: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 300px) {
+  .dashboard-logo h2 {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .dashboard-logo img {
+    width: 20px;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -155,7 +155,6 @@ const useFirebase = () => {
     fetch(`https://radiant-beach-55778.herokuapp.com/${user?.email}/users`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data?.role === "admin") {
           setAdmin(true);
         } else {

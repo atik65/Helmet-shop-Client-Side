@@ -6,6 +6,7 @@ import Explore from "./pages/explore/Explore";
 import BuyNow from "./pages/buynow/BuyNow";
 import Login from "./pages/login/Login";
 import PrivateRoute from "./Routes/PrivateRoute";
+import DashboardContainer from "./pages/dashboard/dashboardContainer/DashboardContainer";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           <Route path="/login" component={Login} />
           <PrivateRoute path="/buynow/:id">
             <BuyNow />
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <DashboardContainer />
           </PrivateRoute>
         </Switch>
       </Router>

@@ -19,7 +19,6 @@ const BuyNow = () => {
       .then((res) => {
         setHelmet(res.data);
         setLoading(false);
-        console.log(helmet);
       })
       .catch((error) => {
         console.log(error.message);
@@ -30,43 +29,45 @@ const BuyNow = () => {
   const { _id, name, price, image, type, certification, rating, description } =
     helmet;
   return (
-    <div>
+    <div style={{ backgroundColor: "white" }}>
       <Navbar />
 
-      {loading ? (
-        <div className="text-center py-5">
-          <div class="spinner-grow text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      ) : (
-        <div className="buynow container py-5">
-          <div className="row px-0 mx-0">
-            <div className="col-md-6">
-              <img src={image} alt="" />
+      <div className="buy-now-inner">
+        {loading ? (
+          <div className="text-center py-5">
+            <div class="spinner-grow text-danger" role="status">
+              <span class="visually-hidden">Loading...</span>
             </div>
-            <div className="col-md-6 ps-4">
-              <h4> Name: {name} </h4>
-              <h5> Type of Helmet: {type} </h5>
-              <h5> Certification: {certification} </h5>
-              <h5> Price: ${price} </h5>
-
-              <div className="pt-0 pb-4">
-                <StarRatings
-                  rating={rating}
-                  starRatedColor="red"
-                  starDimension="15px"
-                  starSpacing="2px"
-                />
+          </div>
+        ) : (
+          <div className="buynow container py-5">
+            <div className="row px-0 mx-0">
+              <div className="col-md-6">
+                <img src={image} alt="" />
               </div>
+              <div className="col-md-6 ps-4">
+                <h4> Name: {name} </h4>
+                <h5> Type of Helmet: {type} </h5>
+                <h5> Certification: {certification} </h5>
+                <h5> Price: ${price} </h5>
 
-              <p> {description} </p>
+                <div className="pt-0 pb-4">
+                  <StarRatings
+                    rating={rating}
+                    starRatedColor="red"
+                    starDimension="15px"
+                    starSpacing="2px"
+                  />
+                </div>
 
-              <button>Place Order</button>
+                <p> {description} </p>
+
+                <button>Place Order</button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       <Footer />
     </div>
