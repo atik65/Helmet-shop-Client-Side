@@ -1,13 +1,4 @@
-// import React from "react";
 import "./reviewUs.css";
-
-// const ReviewUs = () => {
-//   return <div>this is review us page</div>;
-// };
-
-// export default ReviewUs;
-
-// import "./addProduct.css";
 
 import axios from "axios";
 import React, { useState, useEffect } from "react";

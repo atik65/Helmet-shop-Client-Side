@@ -8,6 +8,7 @@ import Login from "./pages/login/Login";
 import PrivateRoute from "./Routes/PrivateRoute";
 import DashboardContainer from "./pages/dashboard/dashboardContainer/DashboardContainer";
 import PlaceOrder from "./pages/placeOrder/PlaceOrder";
+import Error from "./pages/error/Error";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <PrivateRoute path="/dashboard">
             <DashboardContainer />
           </PrivateRoute>
+
+          <Route component={Error} />
         </Switch>
       </Router>
     </FirebaseContext>

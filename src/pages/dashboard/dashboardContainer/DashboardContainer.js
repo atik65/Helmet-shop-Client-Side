@@ -46,11 +46,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useParams,
   useRouteMatch,
 } from "react-router-dom";
 import ReviewUs from "../reviewUs/ReviewUs";
+import AdminRoute from "../../../Routes/AdminRoute";
 
 const drawerWidth = 210;
 
@@ -124,7 +123,7 @@ const Drawer = styled(MuiDrawer, {
 const DashboardContainer = () => {
   let { path, url } = useRouteMatch();
 
-  const { user, logOut } = useAuth();
+  const { user, logOut, admin } = useAuth();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -209,79 +208,85 @@ const DashboardContainer = () => {
               </ListItem>
             </NavLink>
 
-            <NavLink to={`${url}/myorders`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <LocalMallTwoToneIcon />
-                </ListItemIcon>
+            {user.email && !admin && (
+              <div>
+                <NavLink to={`${url}/myorders`}>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <LocalMallTwoToneIcon />
+                    </ListItemIcon>
 
-                <ListItemText primary={"My Orders"} />
-              </ListItem>
-            </NavLink>
+                    <ListItemText primary={"My Orders"} />
+                  </ListItem>
+                </NavLink>
+                <NavLink to={`${url}/pay`}>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <PaymentTwoToneIcon />
+                    </ListItemIcon>
 
-            <NavLink to={`${url}/pay`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <PaymentTwoToneIcon />
-                </ListItemIcon>
+                    <ListItemText primary={"Pay"} />
+                  </ListItem>
+                </NavLink>
+                <NavLink to={`${url}/review`}>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <RateReviewOutlinedIcon />
+                    </ListItemIcon>
 
-                <ListItemText primary={"Pay"} />
-              </ListItem>
-            </NavLink>
+                    <ListItemText primary={"Review Us"} />
+                  </ListItem>
+                </NavLink>{" "}
+              </div>
+            )}
 
-            <NavLink to={`${url}/review`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <RateReviewOutlinedIcon />
-                </ListItemIcon>
+            {user.email && admin && (
+              <div>
+                {/* for admin starts */}
 
-                <ListItemText primary={"Review Us"} />
-              </ListItem>
-            </NavLink>
+                <NavLink to={`${url}/addproduct`}>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <AddCircleOutlineRoundedIcon />
+                    </ListItemIcon>
 
-            {/* for admin starts */}
+                    <ListItemText primary={"Add Product"} />
+                  </ListItem>
+                </NavLink>
 
-            <NavLink to={`${url}/addproduct`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <AddCircleOutlineRoundedIcon />
-                </ListItemIcon>
+                <NavLink to={`${url}/manageorders`}>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <BorderColorIcon />
+                    </ListItemIcon>
 
-                <ListItemText primary={"Add Helmet"} />
-              </ListItem>
-            </NavLink>
+                    <ListItemText primary={"Manage Orders"} />
+                  </ListItem>
+                </NavLink>
 
-            <NavLink to={`${url}/manageorders`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <BorderColorIcon />
-                </ListItemIcon>
+                <NavLink to={`${url}/manageproducts`}>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <ClearAllIcon />
+                    </ListItemIcon>
 
-                <ListItemText primary={"Manage Orders"} />
-              </ListItem>
-            </NavLink>
+                    <ListItemText primary={"Manage Products"} />
+                  </ListItem>
+                </NavLink>
 
-            <NavLink to={`${url}/manageproducts`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <ClearAllIcon />
-                </ListItemIcon>
+                <NavLink to={`${url}/makeadmin`}>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <SupervisorAccountIcon />
+                    </ListItemIcon>
 
-                <ListItemText primary={"Manage Products"} />
-              </ListItem>
-            </NavLink>
+                    <ListItemText primary={"Make Admin"} />
+                  </ListItem>
+                </NavLink>
 
-            <NavLink to={`${url}/makeadmin`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <SupervisorAccountIcon />
-                </ListItemIcon>
-
-                <ListItemText primary={"Make Admin"} />
-              </ListItem>
-            </NavLink>
-
-            {/* for admin ends */}
+                {/* for admin ends */}
+              </div>
+            )}
 
             <ListItem button onClick={logOut}>
               <ListItemIcon>
@@ -314,23 +319,23 @@ const DashboardContainer = () => {
               <Pay />
             </Route>
 
-            <Route exact path={`${path}/addproduct`}>
-              <AddProduct />
-            </Route>
-
-            <Route exact path={`${path}/manageorders`}>
-              <ManageOrders />
-            </Route>
             <Route exact path={`${path}/review`}>
               <ReviewUs />
             </Route>
 
-            <Route exact path={`${path}/manageproducts`}>
+            <AdminRoute exact path={`${path}/addproduct`}>
+              <AddProduct />
+            </AdminRoute>
+
+            <AdminRoute exact path={`${path}/manageorders`}>
+              <ManageOrders />
+            </AdminRoute>
+            <AdminRoute exact path={`${path}/manageproducts`}>
               <ManageProducts />
-            </Route>
-            <Route exact path={`${path}/makeadmin`}>
+            </AdminRoute>
+            <AdminRoute exact path={`${path}/makeadmin`}>
               <MakeAdmin />
-            </Route>
+            </AdminRoute>
           </Switch>
         </div>
       </Box>

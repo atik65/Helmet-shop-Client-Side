@@ -1,0 +1,21 @@
+.make-admin input {
+  width: 50%;
+  margin: auto;
+}
+.make-admin {
+  text-align: center;
+}
+
+.make-admin button {
+  border: none;
+  background-color: #e52727;
+  color: #fafafa;
+  margin-top: 25px;
+  padding: 15px 35px;
+  border-radius: 50px;
+}
+@media only screen and (max-width: 600px) {
+  .make-admin input {
+    width: 90%;
+  }
+}
