@@ -3,6 +3,8 @@
   border-radius: 8px;
   padding: 5px 20px;
   position: relative;
+
+  min-height: 520px;
 }
 
 .single-helmet img {
@@ -57,4 +59,10 @@
 .single-helmet:hover .single-helmet-inner {
   opacity: 1;
   bottom: 160px;
+}
+
+@media only screen and (max-width: 600px) {
+  .single-helmet {
+    min-height: auto;
+  }
 }

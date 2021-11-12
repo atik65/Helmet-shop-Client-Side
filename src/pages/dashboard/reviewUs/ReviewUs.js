@@ -1,14 +1,25 @@
-import "./addProduct.css";
+// import React from "react";
+import "./reviewUs.css";
+
+// const ReviewUs = () => {
+//   return <div>this is review us page</div>;
+// };
+
+// export default ReviewUs;
+
+// import "./addProduct.css";
 
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router";
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hooks/useAuth";
 
 import Swal from "sweetalert2";
 // import useAuth from "../../hooks/useAuth";
 
-const AddProduct = () => {
+const ReviewUs = () => {
+  const { user } = useAuth();
   const {
     reset,
     setValue,
@@ -20,18 +31,17 @@ const AddProduct = () => {
   const [loading, setLoading] = useState(false);
 
   const onSubmit = (data) => {
-    data.rating = parseFloat(data.rating);
-    data.price = parseFloat(data.price);
+    data.review = parseFloat(data.review);
 
     setLoading(true);
     axios
-      .post("https://radiant-beach-55778.herokuapp.com/helmets", data)
+      .post("https://radiant-beach-55778.herokuapp.com/reviews", data)
       .then((res) => {
         setLoading(false);
         reset();
         Swal.fire({
           icon: "success",
-          title: "You Order Placed successfully!",
+          title: "Thanks for Your Review!",
           showConfirmButton: false,
           timer: 1500,
         });
@@ -52,56 +62,22 @@ const AddProduct = () => {
           </div>
         </div>
       ) : (
-        <div className="buynow place-order container py-3">
-          <h2 className="text-center pb-4"> Add New Helmet </h2>
+        <div className="buynow place-order container py-4">
+          <h2 className="text-center pb-4"> Review Us </h2>
           <form onSubmit={handleSubmit(onSubmit)} className="text-center">
             <input
               className="form-control my-2"
               type="text"
-              placeholder="Helmet Name"
+              placeholder=" Name"
+              value={user.displayName}
               {...register("name", { required: true })}
             />
 
             <input
               className="form-control my-2"
-              type="number"
-              placeholder="Price"
-              {...register("price", {
-                required: true,
-              })}
-            />
-
-            <input
-              className="form-control my-2"
               type="text"
-              placeholder="Image Url "
-              {...register("image", {
-                required: true,
-              })}
-            />
-            <input
-              className="form-control my-2"
-              type="text"
-              placeholder="Type of Helmet (As many as Possible)"
-              {...register("type", {
-                required: true,
-              })}
-            />
-
-            <input
-              className="form-control my-2"
-              type="text"
-              placeholder="Certification"
-              {...register("certification", {
-                required: true,
-              })}
-            />
-
-            <input
-              className="form-control my-2"
-              type="number"
               placeholder="Rating ( Must be between 1-5 )"
-              {...register("rating", {
+              {...register("review", {
                 required: true,
                 max: 5,
                 min: 1,
@@ -110,16 +86,16 @@ const AddProduct = () => {
 
             <input
               className="form-control my-2"
-              style={{ height: "80px" }}
+              style={{ height: "100px" }}
               type="text"
-              placeholder="Description"
-              {...register("description", {
+              placeholder="Write Your Review About us"
+              {...register("text", {
                 required: true,
               })}
             />
 
             <button className="email-login my-2" type="submit">
-              Add Helmet
+              Review
             </button>
           </form>
         </div>
@@ -128,4 +104,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default ReviewUs;

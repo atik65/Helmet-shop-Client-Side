@@ -45,9 +45,13 @@ const PlaceOrder = () => {
   }, []);
 
   const onSubmit = (data) => {
+    data.status = "pending";
+
+    setLoading(true);
     axios
       .post("https://radiant-beach-55778.herokuapp.com/orders", data)
       .then((res) => {
+        setLoading(false);
         Swal.fire({
           icon: "success",
           title: "You Order Placed successfully!",
@@ -57,6 +61,7 @@ const PlaceOrder = () => {
         history.push("/explore");
       })
       .catch((error) => {
+        setLoading(false);
         console.log(error.message);
       });
   };
@@ -107,6 +112,13 @@ const PlaceOrder = () => {
                 {...register("product", { required: true })}
               />
 
+              <input
+                className="form-control my-2"
+                type="number"
+                placeholder="Price"
+                value={price}
+                {...register("price", { required: true })}
+              />
               <input
                 className="form-control my-2"
                 type="text"

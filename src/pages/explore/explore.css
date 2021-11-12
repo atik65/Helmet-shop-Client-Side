@@ -1,6 +1,9 @@
 .explore h1 {
   position: relative;
 }
+.explore {
+  background-color: #fafafa;
+}
 /* 
 .explore h1::after {
   content: "";

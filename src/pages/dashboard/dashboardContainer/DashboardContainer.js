@@ -32,6 +32,7 @@ import BorderColorIcon from "@mui/icons-material/BorderColor";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import ClearAllIcon from "@mui/icons-material/ClearAll";
 import HomeIcon from "@mui/icons-material/Home";
+import RateReviewOutlinedIcon from "@mui/icons-material/RateReviewOutlined";
 import Dashboard from "../dashboard/Dashboard";
 import MyOrder from "../myOrder/MyOrder";
 import Pay from "../pay/Pay";
@@ -49,6 +50,7 @@ import {
   useParams,
   useRouteMatch,
 } from "react-router-dom";
+import ReviewUs from "../reviewUs/ReviewUs";
 
 const drawerWidth = 210;
 
@@ -135,7 +137,7 @@ const DashboardContainer = () => {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} style={{ overflowX: "hidden" }}>
       <CssBaseline />
       <AppBar
         style={{
@@ -227,6 +229,16 @@ const DashboardContainer = () => {
               </ListItem>
             </NavLink>
 
+            <NavLink to={`${url}/review`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <RateReviewOutlinedIcon />
+                </ListItemIcon>
+
+                <ListItemText primary={"Review Us"} />
+              </ListItem>
+            </NavLink>
+
             {/* for admin starts */}
 
             <NavLink to={`${url}/addproduct`}>
@@ -308,6 +320,9 @@ const DashboardContainer = () => {
 
             <Route exact path={`${path}/manageorders`}>
               <ManageOrders />
+            </Route>
+            <Route exact path={`${path}/review`}>
+              <ReviewUs />
             </Route>
 
             <Route exact path={`${path}/manageproducts`}>
