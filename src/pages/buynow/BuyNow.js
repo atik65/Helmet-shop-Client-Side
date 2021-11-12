@@ -5,6 +5,7 @@ import Footer from "../shared/footer/Footer";
 import Navbar from "../shared/navbar/Navbar";
 import StarRatings from "react-star-ratings";
 import "./buyNow.css";
+import { NavLink } from "react-router-dom";
 
 const BuyNow = () => {
   const { id } = useParams();
@@ -60,9 +61,9 @@ const BuyNow = () => {
                   />
                 </div>
 
-                <p> {description} </p>
+                <p className="mb-4"> {description} </p>
 
-                <button>Place Order</button>
+                <NavLink to={`/placeorder/${_id}`}>Checkout</NavLink>
               </div>
             </div>
           </div>

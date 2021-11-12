@@ -7,6 +7,7 @@ import BuyNow from "./pages/buynow/BuyNow";
 import Login from "./pages/login/Login";
 import PrivateRoute from "./Routes/PrivateRoute";
 import DashboardContainer from "./pages/dashboard/dashboardContainer/DashboardContainer";
+import PlaceOrder from "./pages/placeOrder/PlaceOrder";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           <Route path="/login" component={Login} />
           <PrivateRoute path="/buynow/:id">
             <BuyNow />
+          </PrivateRoute>
+
+          <PrivateRoute path="/placeorder/:id">
+            <PlaceOrder />
           </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <DashboardContainer />

@@ -1,0 +1,20 @@
+.place-order form {
+  margin: auto;
+  width: 50%;
+}
+
+.place-order button {
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  background-color: #e52727;
+  border: none;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .place-order form {
+    margin: auto;
+    width: 90%;
+  }
+}

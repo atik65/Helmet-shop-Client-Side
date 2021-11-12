@@ -19,7 +19,7 @@
   padding: 20px 0;
 }
 
-.buynow button {
+.buynow a {
   background-color: #e52727;
   color: #fff;
   border: none;
@@ -27,4 +27,9 @@
   padding: 15px 35px;
   border-radius: 50px;
   margin-top: 20px;
+  text-decoration: none;
+}
+
+.buynow a:hover {
+  color: #fff;
 }

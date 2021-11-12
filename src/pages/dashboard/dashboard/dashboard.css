@@ -1,0 +1,29 @@
+.dashboard img {
+  width: 80%;
+}
+
+.dashboard button {
+  margin-top: 20px;
+  background-color: #e52727;
+  color: #fafafa;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+@media only screen and (max-width: 600px) {
+  .dashboard h1 {
+    font-size: 20px;
+  }
+  .dashboard h5 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .dashboard h1 {
+    font-size: 20px;
+  }
+  .dashboard h6 {
+    font-size: 14px;
+  }
+}
