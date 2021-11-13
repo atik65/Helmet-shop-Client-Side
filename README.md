@@ -19,7 +19,7 @@
 ## Features offering this site--
 
 #### From Normal User
--can Register and log in
+- can Register and log in
 - can place order 
 - can give a Review ( in dashboard )
 - can view his orders history ( in dashboard )
