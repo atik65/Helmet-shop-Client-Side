@@ -50,6 +50,7 @@ import {
 } from "react-router-dom";
 import ReviewUs from "../reviewUs/ReviewUs";
 import AdminRoute from "../../../Routes/AdminRoute";
+import EditProduct from "../editProduct/EditProduct";
 
 const drawerWidth = 210;
 
@@ -335,6 +336,10 @@ const DashboardContainer = () => {
             </AdminRoute>
             <AdminRoute exact path={`${path}/makeadmin`}>
               <MakeAdmin />
+            </AdminRoute>
+
+            <AdminRoute exact path={`${path}/edit/:id`}>
+              <EditProduct />
             </AdminRoute>
           </Switch>
         </div>

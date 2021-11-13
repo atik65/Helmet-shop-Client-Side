@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import useAuth from "../../../hooks/useAuth";
 
 import Swal from "sweetalert2";
+import { NavLink } from "react-router-dom";
 
 const ManageProducts = () => {
   const { user } = useAuth();
@@ -69,7 +70,7 @@ const ManageProducts = () => {
   };
 
   return (
-    <div className="manage-orders">
+    <div className="manage-orders product-edit">
       {loading ? (
         <div className="text-center py-5">
           <div className="spinner-grow text-danger" role="status">
@@ -78,7 +79,7 @@ const ManageProducts = () => {
         </div>
       ) : (
         <div>
-          <h2 className="text-center"> Manage or Delete Products </h2>
+          <h2 className="text-center"> Update or Delete Products </h2>
           {helmets.length <= 0 && <h5 className="my-5"> You Have No Order </h5>}
           {helmets.map((order) => {
             const { _id, name, image, price, type, certification } = order;
@@ -88,12 +89,26 @@ const ManageProducts = () => {
                   {" "}
                   <img src={image} alt="" />{" "}
                 </div>
-                <div className="col-md-1"> {name} </div>
-                <div className="col-md-3"> {type} </div>
+                <div className="col-md-1 d-flex align-items-center">
+                  {" "}
+                  {name}{" "}
+                </div>
+                <div className="col-md-3 d-flex align-items-center">
+                  {" "}
+                  {type}{" "}
+                </div>
 
-                <div className="col-md-2 my-3 my-md-0">{certification}</div>
+                <div className="col-md-2 my-3 my-md-0 d-flex align-items-center">
+                  {certification}
+                </div>
 
-                <div className="col-md-2"> ${price} </div>
+                <div className="col-md-1 d-flex align-items-center">
+                  {" "}
+                  ${price}{" "}
+                </div>
+                <div className="col-md-1 my-3 d-flex align-items-center">
+                  <NavLink to={`/dashboard/edit/${_id}`}>Edit </NavLink>
+                </div>
 
                 <div className="col-md-2 d-flex align-items-center">
                   <button onClick={() => deleteHelmet(_id)}>

@@ -1,3 +1,15 @@
 .manage-orders img {
   width: 50%;
 }
+
+.product-edit a {
+  background-color: lightgreen;
+  text-decoration: none;
+  padding: 2px 15px;
+  border-radius: 20px;
+  color: #363636;
+}
+
+.product-edit a:hover {
+  color: #363636;
+}
