@@ -95,7 +95,7 @@ const MyOrder = () => {
                 <div className="col-md-2 my-3 my-md-0">
                   {" "}
                   {status === "approved" ? (
-                    <span className="text-success"> Approved </span>
+                    <span className="text-success"> Shipped </span>
                   ) : (
                     <span className="text-danger"> Pending </span>
                   )}{" "}

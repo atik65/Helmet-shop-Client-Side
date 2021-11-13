@@ -120,7 +120,7 @@ const MyOrder = () => {
                 <div className="col-md-2 my-3 my-md-0">
                   {" "}
                   {status === "approved" ? (
-                    <span className="text-success"> Approved </span>
+                    <span className="text-success"> Shipped </span>
                   ) : (
                     <span className="text-danger"> Pending </span>
                   )}{" "}
@@ -132,7 +132,14 @@ const MyOrder = () => {
                     className="approve-button mb-2 mb-md-0"
                     onClick={() => approveOrder(_id)}
                   >
-                    Approve Now <i className="far fa-check-square"></i>
+                    {status === "approved" ? (
+                      <span> Already Shipped </span>
+                    ) : (
+                      <span>
+                        {" "}
+                        Ship Now <i className="far fa-check-square"></i>{" "}
+                      </span>
+                    )}
                   </button>
                 </div>
 

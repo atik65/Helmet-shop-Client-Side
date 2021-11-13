@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const SingleHelmet = ({ helmet }) => {
   const { _id, name, price, image, type, certification, rating } = helmet;
   return (
-    <div className="single-helmet">
+    <div data-aos="zoom-in-up" className="single-helmet">
       <img src={image} alt="" />
       <div className="single-helmet-des">
         <h4> {name} </h4>
