@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDesaFMSK5oP3fRKQjXYGQ5ujHMD-jL9_o",
-  authDomain: "helmet-market.firebaseapp.com",
-  projectId: "helmet-market",
-  storageBucket: "helmet-market.appspot.com",
-  messagingSenderId: "144444278236",
-  appId: "1:144444278236:web:2d5b4fc8a13300151ebb19",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 export default firebaseConfig;

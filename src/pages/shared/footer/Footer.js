@@ -20,22 +20,22 @@ const Footer = () => {
         <div className="col-md-4 pt-4 pt-md-0">
           <h2>Our Services</h2>
           <a href="">
-            <i class="fas fa-check-double"></i> Delivery Information
+            <i className="fas fa-check-double"></i> Delivery Information
           </a>
 
           <a href="">
-            <i class="fas fa-check-double"></i> Contact Us
+            <i className="fas fa-check-double"></i> Contact Us
           </a>
           <a href="">
-            <i class="fas fa-check-double"></i> Information
-          </a>
-
-          <a href="">
-            <i class="fas fa-check-double"></i> Lets Talk
+            <i className="fas fa-check-double"></i> Information
           </a>
 
           <a href="">
-            <i class="fas fa-check-double"></i> Terms And Conditions
+            <i className="fas fa-check-double"></i> Lets Talk
+          </a>
+
+          <a href="">
+            <i className="fas fa-check-double"></i> Terms And Conditions
           </a>
         </div>
         <div className="col-md-4 pt-4 pt-md-0">
@@ -49,7 +49,7 @@ const Footer = () => {
             <input type="text" placeholder="Your Email Address" />
             <button>
               {" "}
-              <i class="fas fa-envelope"></i>{" "}
+              <i className="fas fa-envelope"></i>{" "}
             </button>
           </div>
         </div>

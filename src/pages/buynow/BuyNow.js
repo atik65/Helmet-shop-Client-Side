@@ -36,8 +36,8 @@ const BuyNow = () => {
       <div className="buy-now-inner">
         {loading ? (
           <div className="text-center py-5">
-            <div class="spinner-grow text-danger" role="status">
-              <span class="visually-hidden">Loading...</span>
+            <div className="spinner-grow text-danger" role="status">
+              <span className="visually-hidden">Loading...</span>
             </div>
           </div>
         ) : (

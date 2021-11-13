@@ -73,8 +73,8 @@ const MyOrder = () => {
     <div>
       {loading ? (
         <div className="text-center py-5">
-          <div class="spinner-grow text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div className="spinner-grow text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : (
@@ -102,7 +102,7 @@ const MyOrder = () => {
                 </div>
                 <div className="col-md-2 d-flex align-items-center">
                   <button onClick={() => deleteOrder(_id)}>
-                    Cancel order <i class="far fa-trash-alt "></i>{" "}
+                    Cancel order <i className="far fa-trash-alt "></i>{" "}
                   </button>
                 </div>
               </div>

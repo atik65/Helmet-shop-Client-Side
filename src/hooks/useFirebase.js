@@ -22,7 +22,7 @@ const useFirebase = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState("true");
   const [admin, setAdmin] = useState(false);
-  const [userDetails, setUserDetails] = useState({});
+  const [adminLoading, setAdminLoading] = useState(false);
 
   // const history = useHistory();
 
@@ -152,17 +152,22 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
+    // setAdminLoading(false);
     fetch(`https://radiant-beach-55778.herokuapp.com/${user?.email}/users`)
       .then((res) => res.json())
       .then((data) => {
         if (data?.role === "admin") {
           setAdmin(true);
+          setAdminLoading(false);
         } else {
           setAdmin(false);
+          setAdminLoading(true);
         }
       })
       .catch((error) => {
         console.log(error.message);
+        // setLoading(false);
+        setAdminLoading(false);
       });
   }, [user.email]);
 
@@ -173,7 +178,7 @@ const useFirebase = () => {
     googleSignIn,
     error,
     user,
-    userDetails,
+    adminLoading,
     loading,
     admin,
   };

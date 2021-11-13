@@ -72,8 +72,8 @@ const ManageProducts = () => {
     <div className="manage-orders">
       {loading ? (
         <div className="text-center py-5">
-          <div class="spinner-grow text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div className="spinner-grow text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : (
@@ -97,7 +97,7 @@ const ManageProducts = () => {
 
                 <div className="col-md-2 d-flex align-items-center">
                   <button onClick={() => deleteHelmet(_id)}>
-                    Delete Helmet <i class="far fa-trash-alt "></i>
+                    Delete Helmet <i className="far fa-trash-alt "></i>
                   </button>
                 </div>
               </div>

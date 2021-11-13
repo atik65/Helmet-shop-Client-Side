@@ -98,8 +98,8 @@ const MyOrder = () => {
     <div>
       {loading ? (
         <div className="text-center py-5">
-          <div class="spinner-grow text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div className="spinner-grow text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : (
@@ -132,13 +132,13 @@ const MyOrder = () => {
                     className="approve-button mb-2 mb-md-0"
                     onClick={() => approveOrder(_id)}
                   >
-                    Approve Now <i class="far fa-check-square"></i>
+                    Approve Now <i className="far fa-check-square"></i>
                   </button>
                 </div>
 
                 <div className="col-md-2 d-flex align-items-center">
                   <button onClick={() => deleteOrder(_id)}>
-                    Cancel order <i class="far fa-trash-alt "></i>
+                    Cancel order <i className="far fa-trash-alt "></i>
                   </button>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const Contacts = () => {
         <div className="contact-left px-5 py-4">
           <div className="row px-0 mx-0 py-3">
             <div className="col-2 contact-logo">
-              <i class="fas fa-phone"></i>
+              <i className="fas fa-phone"></i>
             </div>
             <div className="col-10">
               <h5> Call Us</h5>
@@ -19,7 +19,7 @@ const Contacts = () => {
 
           <div className="row px-0 mx-0 py-3">
             <div className="col-2 contact-logo">
-              <i class="far fa-envelope"></i>
+              <i className="far fa-envelope"></i>
             </div>
             <div className="col-10">
               <h5> Sent Us Email.</h5>
@@ -29,7 +29,7 @@ const Contacts = () => {
 
           <div className="row px-0 mx-0 py-3">
             <div className="col-2 contact-logo">
-              <i class="far fa-map"></i>
+              <i className="far fa-map"></i>
             </div>
             <div className="col-10">
               <h5> Meet Us At </h5>
@@ -41,7 +41,7 @@ const Contacts = () => {
 
           <div className="row px-0 mx-0 py-3">
             <div className="col-2 contact-logo">
-              <i class="fas fa-globe"></i>
+              <i className="fas fa-globe"></i>
             </div>
             <div className="col-10">
               <h5> Website </h5>
