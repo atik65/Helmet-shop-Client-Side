@@ -1,6 +1,6 @@
 # live site : https://helmet-market.web.app/
 
-### This is s Helmet selling online store fullstact site.
+### This is s Helmet selling online store full stack website.
  
 ## what technologies i used -
 - React for fronted 
