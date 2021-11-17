@@ -23,9 +23,27 @@ const AddProduct = () => {
     data.rating = parseFloat(data.rating);
     data.price = parseFloat(data.price);
 
+    if (!data.image) {
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("certification", data.certification);
+    formData.append("description", data.description);
+    formData.append("image", data.image[0]);
+    formData.append("price", data.price);
+    formData.append("rating", data.rating);
+    formData.append("type", data.type);
+    formData.append("name", data.name);
+
+    if (data.image[0].size / 1024 > 70) {
+      alert("Picture is more than 70 KB ... I need an image under 70KB");
+      return;
+    }
+
     setLoading(true);
     axios
-      .post("https://radiant-beach-55778.herokuapp.com/helmets", data)
+      .post("https://radiant-beach-55778.herokuapp.com/helmets", formData)
       .then((res) => {
         setLoading(false);
         reset();
@@ -73,7 +91,7 @@ const AddProduct = () => {
 
             <input
               className="form-control my-2"
-              type="text"
+              type="file"
               placeholder="Image Url "
               {...register("image", {
                 required: true,

@@ -44,7 +44,7 @@ const BuyNow = () => {
           <div className="buynow container py-5">
             <div className="row px-0 mx-0">
               <div className="col-md-6">
-                <img src={image} alt="" />
+                <img src={`data:image/png;base64, ${image}`} alt="" />
               </div>
               <div className="col-md-6 ps-4">
                 <h4> Name: {name} </h4>

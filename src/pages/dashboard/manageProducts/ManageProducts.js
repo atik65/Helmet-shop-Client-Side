@@ -87,7 +87,7 @@ const ManageProducts = () => {
               <div key={_id} className="row px-0 mx-0 my-4 py-3 my-order-item">
                 <div className="col-md-2 text-center">
                   {" "}
-                  <img src={image} alt="" />{" "}
+                  <img src={`data:image/png;base64, ${image}`} alt="" />
                 </div>
                 <div className="col-md-1 d-flex align-items-center">
                   {" "}
