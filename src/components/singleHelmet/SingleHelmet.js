@@ -12,6 +12,7 @@ const SingleHelmet = ({ helmet }) => {
   return (
     <div data-aos="zoom-in-up" className="single-helmet">
       <img src={`data:image/png;base64, ${image}`} alt="" />
+
       <div className="single-helmet-des">
         <h4> {name} </h4>
         <h6>

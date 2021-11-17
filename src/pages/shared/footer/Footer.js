@@ -48,9 +48,19 @@ const Footer = () => {
           <div className="footer-subs">
             <input type="text" placeholder="Your Email Address" />
             <button>
-              {" "}
               <i className="fas fa-envelope"></i>{" "}
             </button>
+            <br />
+
+            <small className="text-light d-flex mt-4">
+              <span className="me-3"> &copy; 2021 By </span>{" "}
+              <a
+                target="_blank"
+                href="https://www.facebook.com/atik.selfibazz/"
+              >
+                Atik Hasan 😎
+              </a>
+            </small>
           </div>
         </div>
       </div>
