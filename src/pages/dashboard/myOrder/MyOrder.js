@@ -3,11 +3,13 @@ import React, { useState, useEffect } from "react";
 import useAuth from "../../../hooks/useAuth";
 import "./myOrder.css";
 import Swal from "sweetalert2";
+import { useHistory } from "react-router";
 
 const MyOrder = () => {
   const { user } = useAuth();
   const [myOrders, setMyOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     setLoading(true);
@@ -69,6 +71,11 @@ const MyOrder = () => {
     });
   };
 
+  // function for payment
+  const handlePay = () => {
+    console.log("Payment");
+  };
+
   return (
     <div>
       {loading ? (
@@ -88,11 +95,11 @@ const MyOrder = () => {
             return (
               <div key={_id} className="row px-0 mx-0 my-4 py-3 my-order-item">
                 <div className="col-md-2"> {product} </div>
-                <div className="col-md-2"> ${price} </div>
+                <div className="col-md-1"> ${price} </div>
                 <div className="col-md-2"> {name} </div>
                 <div className="col-md-2"> {address} </div>
 
-                <div className="col-md-2 my-3 my-md-0">
+                <div className="col-md-1 my-3 my-md-0 text-center">
                   {" "}
                   {status === "approved" ? (
                     <span className="text-success"> Shipped </span>
@@ -100,7 +107,23 @@ const MyOrder = () => {
                     <span className="text-danger"> Pending </span>
                   )}{" "}
                 </div>
-                <div className="col-md-2 d-flex align-items-center">
+
+                <div className="col-md-2 text-center mb-md-0 mb-3">
+                  {order?.paid ? (
+                    <span style={{ color: "green" }}> Paid </span>
+                  ) : (
+                    <button
+                      onClick={() => {
+                        history.push(`/payment/${_id}`);
+                      }}
+                      style={{ backgroundColor: "lightgreen", color: "black" }}
+                    >
+                      Pay Now
+                    </button>
+                  )}
+                </div>
+
+                <div className="col-md-2 d-flex align-items-center justify-content-center">
                   <button onClick={() => deleteOrder(_id)}>
                     Cancel order <i className="far fa-trash-alt "></i>{" "}
                   </button>

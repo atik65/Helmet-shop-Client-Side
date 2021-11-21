@@ -117,13 +117,21 @@ const MyOrder = () => {
                 <div className="col-md-1"> ${price} </div>
                 <div className="col-md-3"> {email} </div>
 
-                <div className="col-md-2 my-3 my-md-0">
+                <div className="col-md-1 my-3 my-md-0">
                   {" "}
                   {status === "approved" ? (
                     <span className="text-success"> Shipped </span>
                   ) : (
                     <span className="text-danger"> Pending </span>
                   )}{" "}
+                </div>
+
+                <div className="col-md-1 mb-md-0 mb-2">
+                  {order?.paid ? (
+                    <span className="text-success"> Paid </span>
+                  ) : (
+                    <span className="text-danger"> Unpaid </span>
+                  )}
                 </div>
 
                 <div className="col-md-2">

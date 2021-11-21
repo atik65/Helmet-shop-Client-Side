@@ -1,0 +1,18 @@
+.payment {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment img {
+  width: 80%;
+}
+.payment-inner {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .payment {
+    flex-direction: column;
+  }
+}

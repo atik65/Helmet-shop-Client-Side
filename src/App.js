@@ -9,6 +9,8 @@ import PrivateRoute from "./Routes/PrivateRoute";
 import DashboardContainer from "./pages/dashboard/dashboardContainer/DashboardContainer";
 import PlaceOrder from "./pages/placeOrder/PlaceOrder";
 import Error from "./pages/error/Error";
+import Paymnet from "./pages/payment/Paymnet";
+import PaymentSucces from "./pages/paymentSuccess/PaymentSucces";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <PrivateRoute path="/dashboard">
             <DashboardContainer />
           </PrivateRoute>
+          <Route exact path="/payment/:id" component={Paymnet} />
+          <Route path="/payment/success/:id" component={PaymentSucces} />
 
           <Route component={Error} />
         </Switch>

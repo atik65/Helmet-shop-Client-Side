@@ -7,8 +7,6 @@ import { NavLink } from "react-router-dom";
 const SingleHelmet = ({ helmet }) => {
   const { _id, name, price, image, type, certification, rating } = helmet;
 
-  console.log(typeof image);
-
   return (
     <div data-aos="zoom-in-up" className="single-helmet">
       <img src={`data:image/png;base64, ${image}`} alt="" />

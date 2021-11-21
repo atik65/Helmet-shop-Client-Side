@@ -35,7 +35,6 @@ const PlaceOrder = () => {
         setHelmet(res.data);
         setLoading(false);
         setValue("name", user?.displayName);
-        setValue("email", user.email);
         setValue("product", res.data.name);
       })
       .catch((error) => {
@@ -46,6 +45,9 @@ const PlaceOrder = () => {
 
   const onSubmit = (data) => {
     data.status = "pending";
+    data.email = user.email;
+
+    console.log(data);
 
     setLoading(true);
     axios
@@ -54,11 +56,11 @@ const PlaceOrder = () => {
         setLoading(false);
         Swal.fire({
           icon: "success",
-          title: "You Order Placed successfully!",
-          showConfirmButton: false,
-          timer: 1500,
+          title: "You Order Placed successfully! Pay now",
+          showConfirmButton: true,
+          timer: 3000,
         });
-        history.push("/explore");
+        history.push(`/dashboard/myorders`);
       })
       .catch((error) => {
         setLoading(false);
@@ -97,6 +99,7 @@ const PlaceOrder = () => {
               <input
                 className="form-control my-2"
                 type="text"
+                value={user.email}
                 placeholder="Email"
                 {...register("email", {
                   required: true,
