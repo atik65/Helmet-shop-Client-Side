@@ -44,7 +44,7 @@ const Paymnet = () => {
   // const handleSsl = () => {
   // setLoading(true);
   // axios
-  //   .post("http://localhost:5000/sslcommerz", order)
+  //   .post("https://radiant-beach-55778.herokuapp.com/sslcommerz", order)
   //   .then((res) => {
   //     setLoading(false);
   //     // window.location = res.data.url;
