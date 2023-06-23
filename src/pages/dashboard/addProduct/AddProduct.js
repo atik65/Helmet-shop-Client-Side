@@ -43,7 +43,7 @@ const AddProduct = () => {
 
     setLoading(true);
     axios
-      .post("https://radiant-beach-55778.herokuapp.com/helmets", formData)
+      .post("https://helmetshop.onrender.com/helmets", formData)
       .then((res) => {
         setLoading(false);
         reset();

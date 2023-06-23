@@ -14,7 +14,7 @@ const MakeAdmin = () => {
 
     setLoading(true);
     axios
-      .put(`https://radiant-beach-55778.herokuapp.com/${email}/users/admin`)
+      .put(`https://helmetshop.onrender.com/${email}/users/admin`)
       .then((res) => {
         setLoading(false);
         setEmail("");

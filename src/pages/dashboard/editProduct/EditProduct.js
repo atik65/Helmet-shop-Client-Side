@@ -25,7 +25,7 @@ const EditProduct = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://radiant-beach-55778.herokuapp.com/helmets/${id}`)
+      .get(`https://helmetshop.onrender.com/helmets/${id}`)
       .then((res) => {
         const {
           _id,
@@ -89,10 +89,7 @@ const EditProduct = () => {
       if (result.isConfirmed) {
         setLoading(true);
         axios
-          .put(
-            `https://radiant-beach-55778.herokuapp.com/helmets/${id}`,
-            formData
-          )
+          .put(`https://helmetshop.onrender.com/helmets/${id}`, formData)
           .then((res) => {
             setLoading(false);
 

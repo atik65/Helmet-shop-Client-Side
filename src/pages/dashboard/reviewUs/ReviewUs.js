@@ -26,7 +26,7 @@ const ReviewUs = () => {
 
     setLoading(true);
     axios
-      .post("https://radiant-beach-55778.herokuapp.com/reviews", data)
+      .post("https://helmetshop.onrender.com/reviews", data)
       .then((res) => {
         setLoading(false);
         reset();

@@ -15,7 +15,7 @@ const Paymnet = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://radiant-beach-55778.herokuapp.com/orders/${id}`)
+      .get(`https://helmetshop.onrender.com/orders/${id}`)
       .then((res) => {
         setOrder(res.data);
 
@@ -30,7 +30,7 @@ const Paymnet = () => {
   const handleStripe = () => {
     setLoading(true);
     axios
-      .post("https://radiant-beach-55778.herokuapp.com/payment/stripe", order)
+      .post("https://helmetshop.onrender.com/payment/stripe", order)
       .then((res) => {
         setLoading(false);
         window.location = res.data.url;
@@ -44,7 +44,7 @@ const Paymnet = () => {
   // const handleSsl = () => {
   // setLoading(true);
   // axios
-  //   .post("https://radiant-beach-55778.herokuapp.com/sslcommerz", order)
+  //   .post("https://helmetshop.onrender.com/sslcommerz", order)
   //   .then((res) => {
   //     setLoading(false);
   //     // window.location = res.data.url;

@@ -142,18 +142,21 @@ const useFirebase = () => {
   const setUserToDB = (email, displayName, method) => {
     const newUser = { email, displayName };
 
-    fetch(`https://radiant-beach-55778.herokuapp.com/users`, {
-      method: method,
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    });
+    try {
+      fetch(`https://helmetshop.onrender.com/users`, {
+        method: method,
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+      });
+    } catch (e) {
+      console.log(e.message);
+    }
   };
 
   useEffect(() => {
-    // setAdminLoading(false);
-    fetch(`https://radiant-beach-55778.herokuapp.com/${user?.email}/users`)
+    fetch(`https://helmetshop.onrender.com/${user?.email}/users`)
       .then((res) => res.json())
       .then((data) => {
         if (data?.role === "admin") {

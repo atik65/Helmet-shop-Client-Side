@@ -14,7 +14,7 @@ const ManageProducts = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://radiant-beach-55778.herokuapp.com/helmets`)
+      .get(`https://helmetshop.onrender.com/helmets`)
       .then((res) => {
         setHelmets(res.data);
         setLoading(false);
@@ -38,12 +38,12 @@ const ManageProducts = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://radiant-beach-55778.herokuapp.com/helmets/${id}`)
+          .delete(`https://helmetshop.onrender.com/helmets/${id}`)
           .then((res) => {
             setLoading(false);
             setLoading(true);
             axios
-              .get(`https://radiant-beach-55778.herokuapp.com/helmets`)
+              .get(`https://helmetshop.onrender.com/helmets`)
               .then((res) => {
                 setHelmets(res.data);
                 setLoading(false);

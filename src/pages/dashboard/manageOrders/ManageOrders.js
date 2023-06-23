@@ -12,7 +12,7 @@ const MyOrder = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://radiant-beach-55778.herokuapp.com/orders`)
+      .get(`https://helmetshop.onrender.com/orders`)
       .then((res) => {
         setMyOrders(res.data);
         setLoading(false);
@@ -36,12 +36,12 @@ const MyOrder = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://radiant-beach-55778.herokuapp.com/orders/${id}`)
+          .delete(`https://helmetshop.onrender.com/orders/${id}`)
           .then((res) => {
             setLoading(false);
             setLoading(true);
             axios
-              .get(`https://radiant-beach-55778.herokuapp.com/orders`)
+              .get(`https://helmetshop.onrender.com/orders`)
               .then((res) => {
                 setMyOrders(res.data);
                 setLoading(false);
@@ -70,7 +70,7 @@ const MyOrder = () => {
   const approveOrder = (id) => {
     setLoading(true);
     axios
-      .put(`https://radiant-beach-55778.herokuapp.com/orders/${id}`, {
+      .put(`https://helmetshop.onrender.com/orders/${id}`, {
         status: "approved",
       })
       .then((res) => {
@@ -78,7 +78,7 @@ const MyOrder = () => {
 
         setLoading(true);
         axios
-          .get(`https://radiant-beach-55778.herokuapp.com/orders`)
+          .get(`https://helmetshop.onrender.com/orders`)
           .then((res) => {
             setMyOrders(res.data);
             setLoading(false);

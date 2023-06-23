@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import SingleHelmet from "../../../components/singleHelmet/SingleHelmet";
 
 import "./displayProducts.css";
+import Loading from "../../../components/shared/Loading";
 
 const DisplayProducts = () => {
   const [helmets, setHelmtes] = useState([]);
@@ -12,7 +13,7 @@ const DisplayProducts = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://radiant-beach-55778.herokuapp.com/helmets")
+      .get("https://helmetshop.onrender.com/helmets")
       .then((res) => {
         setHelmtes(res.data.slice(0, 6));
         setLoading(false);
@@ -36,11 +37,7 @@ const DisplayProducts = () => {
         </div>
 
         {loading ? (
-          <div className="text-center py-5">
-            <div className="spinner-grow text-danger" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-          </div>
+          <Loading />
         ) : (
           <div className="display-products-container">
             {helmets.map((helmet) => {

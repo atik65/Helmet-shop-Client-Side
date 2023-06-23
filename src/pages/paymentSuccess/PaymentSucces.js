@@ -9,7 +9,7 @@ const PaymentSucces = () => {
 
   useEffect(() => {
     axios
-      .put(`https://radiant-beach-55778.herokuapp.com/orders/payment/${id}`)
+      .put(`https://helmetshop.onrender.com/orders/payment/${id}`)
       .then((res) => {
         history.push("/dashboard/myorders");
       })

@@ -30,7 +30,7 @@ const PlaceOrder = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://radiant-beach-55778.herokuapp.com/helmets/${id}`)
+      .get(`https://helmetshop.onrender.com/helmets/${id}`)
       .then((res) => {
         setHelmet(res.data);
         setLoading(false);
@@ -51,7 +51,7 @@ const PlaceOrder = () => {
 
     setLoading(true);
     axios
-      .post("https://radiant-beach-55778.herokuapp.com/orders", data)
+      .post("https://helmetshop.onrender.com/orders", data)
       .then((res) => {
         setLoading(false);
         Swal.fire({

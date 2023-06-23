@@ -6,6 +6,7 @@ import Navbar from "../shared/navbar/Navbar";
 import StarRatings from "react-star-ratings";
 import "./buyNow.css";
 import { NavLink } from "react-router-dom";
+import Loading from "../../components/shared/Loading";
 
 const BuyNow = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const BuyNow = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://radiant-beach-55778.herokuapp.com/helmets/${id}`)
+      .get(`https://helmetshop.onrender.com/helmets/${id}`)
       .then((res) => {
         setHelmet(res.data);
         setLoading(false);
@@ -35,11 +36,7 @@ const BuyNow = () => {
 
       <div className="buy-now-inner">
         {loading ? (
-          <div className="text-center py-5">
-            <div className="spinner-grow text-danger" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-          </div>
+          <Loading />
         ) : (
           <div className="buynow container py-5">
             <div className="row px-0 mx-0">
